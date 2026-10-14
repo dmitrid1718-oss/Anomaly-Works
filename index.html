@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06152a">
+  <meta name="description" content="Anomaly Works is an independent experimental laboratory exploring intelligence, observation, and unexpected discovery.">
+  <title>Anomaly Works — Independent Experimental Laboratory</title>
+  <style>
+    :root { color-scheme: dark; --bg:#06111f; --ink:#f5faff; --quiet:#9eb7c8; --line:rgba(170,213,245,.16); }
+    * { box-sizing:border-box }
+    html { scroll-behavior:smooth }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif; font-weight:300 }
+    a { color:inherit; text-decoration:none }
+    button { font:inherit }
+    .hero { position:relative; min-height:100svh; overflow:hidden; isolation:isolate; background:#06162b; }
+    .hero::before { content:""; position:absolute; inset:0; z-index:-2; background:url("assets/horizon.png") center / cover no-repeat,
+      radial-gradient(ellipse at 46% 62%,#0382bb 0%,#07345b 32%,#06162b 74%); }
+    .hero::after { content:""; pointer-events:none; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,transparent 48%,rgba(2,8,23,.32) 100%),linear-gradient(0deg,rgba(2,8,23,.38),transparent 26%); }
+    .statement { position:absolute; top:clamp(55px,15vh,180px); right:clamp(24px,7.8vw,160px); width:clamp(190px,24vw,330px); text-shadow:0 2px 24px rgba(0,8,22,.5); }
+    .eyebrow,.micro { font-size:10px; font-weight:500; letter-spacing:.23em; line-height:1.7 }
+    .statement p { margin:28px 0 0; font-size:clamp(14px,1.25vw,18px); line-height:1.8; font-weight:300; letter-spacing:.005em }
+    .rule { margin:29px 0 17px; width:28px; height:1px; background:rgba(220,243,255,.8) }
+    .subtitle { font-size:9px; line-height:1.8; letter-spacing:.15em; color:#d9e9f4; text-transform:uppercase }
+    .enter { position:absolute; left:50%; bottom:clamp(24px,5vh,60px); transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:12px; padding:12px 22px; border:0; background:none; cursor:pointer; color:#fff; font-size:10px; letter-spacing:.26em; font-weight:500; transition:opacity .2s ease }
+    .enter:hover,.enter:focus-visible { opacity:.7 }
+    .enter svg { width:15px; height:22px; stroke:currentColor; stroke-width:1.1; fill:none }
+    .interior { padding:clamp(80px,12vw,160px) max(7vw,24px) 45px; background:linear-gradient(180deg,#061321 0%,#07111c 55%,#050b12 100%) }
+    .interior-inner { max-width:1000px; margin:0 auto }
+    .section-lead { max-width:640px; margin:0 0 clamp(100px,13vw,180px) }
+    .section-lead h1 { font-size:clamp(30px,5vw,66px); line-height:1.22; font-weight:300; letter-spacing:-.035em; margin:30px 0 }
+    .section-lead p,.panel p { color:var(--quiet); line-height:1.9; font-size:clamp(14px,1.35vw,17px) }
+    .panels { border-top:1px solid var(--line) }
+    .panel { display:grid; grid-template-columns: minmax(160px, 1fr) 2fr; gap:40px; padding:48px 0; border-bottom:1px solid var(--line) }
+    .panel h2 { font-size:clamp(20px,2.6vw,32px); font-weight:300; margin:0 0 18px }
+    .panel p { max-width:510px; margin:0 }
+    .panel .micro { color:#8ccdec }
+    .status { display:inline-block; margin-top:22px; font-size:10px; letter-spacing:.18em; color:#90bfda }
+    footer { display:flex; justify-content:space-between; gap:32px; padding:65px 0 22px; color:#73899a; font-size:10px; letter-spacing:.1em; flex-wrap:wrap }
+    footer a { text-decoration:underline; text-underline-offset:4px }
+    @media (max-width:700px) {
+      .hero::before { background-position:43% center }
+      .statement { top:8vh; right:6vw; width:min(235px,52vw) }
+      .statement p { margin-top:17px; font-size:13px; line-height:1.65 }
+      .rule { margin:18px 0 12px }
+      .subtitle { font-size:8px }
+      .panel { grid-template-columns:1fr; gap:16px; padding:38px 0 }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto } .enter { transition:none } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-label="Anomaly Works entrance">
+      <div class="statement">
+        <div class="eyebrow">ANOMALY WORKS</div>
+        <p>We build the tools<br>before we know<br>what they measure.</p>
+        <div class="rule"></div>
+        <div class="subtitle">Independent experimental laboratory</div>
+      </div>
+      <a class="enter" href="#laboratory" aria-label="Enter the laboratory, scroll down">
+        ENTER
+        <svg viewBox="0 0 16 24" aria-hidden="true"><path d="M8 0v21M2 15l6 6 6-6"/></svg>
+      </a>
+    </section>
+    <section class="interior" id="laboratory">
+      <div class="interior-inner">
+        <div class="section-lead">
+          <div class="micro">THE LABORATORY / 001</div>
+          <h1>Curiosity is the instrument.</h1>
+          <p>Anomaly Works is an independent experimental laboratory exploring intelligence, observation, and unexpected discovery. We begin with questions, build small instruments, and let real-world tests challenge the explanations.</p>
+        </div>
+        <div class="panels">
+          <article class="panel">
+            <div class="micro">01 / THE QUESTION</div>
+            <div><h2>Look differently.</h2><p>What happens when human and artificial intelligence investigate something ordinary without assuming where the answer should lead?</p></div>
+          </article>
+          <article class="panel">
+            <div class="micro">02 / THE WORKBENCH</div>
+            <div><h2>Build. Test. Reconsider.</h2><p>Small experimental instruments, practical objects, observation protocols, and prototypes. An idea can become a working tool, change shape entirely, or be set aside.</p><span class="status">STATUS / EXPLORING</span></div>
+          </article>
+          <article class="panel">
+            <div class="micro">03 / FIELD NOTES</div>
+            <div><h2>Keep the uncertainty.</h2><p>We distinguish what was observed from what is inferred. Surprises, failed attempts, contradictions, and unanswered questions belong in the record.</p><span class="status">NOTES / COMING INTO FOCUS</span></div>
+          </article>
+        </div>
+        <footer><span>ANOMALY WORKS · THE EXPERIMENT DOES NOT OWE US AN ANSWER.</span><a href="https://uselessinstruments.com/" target="_blank" rel="noopener noreferrer">USELESS INSTRUMENTS ↗</a></footer>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
