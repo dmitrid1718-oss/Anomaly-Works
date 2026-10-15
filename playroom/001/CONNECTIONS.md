@@ -29,3 +29,11 @@ Rotate the owner control token in Vercel and redeploy to revoke operator access.
 
 ## Verification
 Local authorization, bounded-action validation, and presence-expiry tests pass. Deployment/live verification is recorded below after testing.
+
+### Live verification — 2026-10-15
+- Production deployment dpl_6yBcnWAN73Vd7ycZaMk6FsUDz6Gw reached READY for commit ff71fb94947328a088122b62cc0a44d09bf4bd22 (same tree as reviewed local commit ad1b0e1).
+- Authenticated two-turn run returned HTTP 200. A selected ring at (0.43, 0.50); G selected gather at (0.58, 0.50).
+- Both replies and layer changes were observed in the live browser. Completed session is paused with both bulbs off.
+- Session: 48b7b2e5-d162-422b-bc92-fed84ab8a53b. Reported combined Gateway cost: $0.003872.
+- Public unauthenticated run returned HTTP 401.
+- New conversations are bounded operator-started sessions; no continuous unattended session was enabled.
