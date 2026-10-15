@@ -1,5 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {authorized,validateAction,publicState,fresh} from '../lib/room.js';
+import {authorized,validateAction,publicState,fresh,normalizeEtag} from '../lib/room.js';
 test('owner authorization rejects missing and wrong secrets',()=>{assert.equal(authorized(undefined,'abc'),false);assert.equal(authorized('Bearer wrong','abc'),false);assert.equal(authorized('Bearer abc','abc'),true);assert.equal(authorized('Bearer ',''),false);});
 test('reject unsafe model action and text',()=>{for(const v of [null,{shape:'unknown'},{shape:'ring',x:Infinity,y:.5,energy:.5,message:''},{shape:'ring',x:.5,y:.5,energy:.5,message:'x'.repeat(281)}])assert.throws(()=>validateAction(v));assert.equal(validateAction({shape:'still',x:.5,y:.5,energy:0,message:''}).shape,'still');});
 test('presence needs reply and unexpired server lease',()=>{const s=fresh();s.mode='running';s.leaseUntil=200000;s.participants.a.lastReply=100000;assert.equal(publicState(s,110000).participants.a.connected,true);assert.equal(publicState(s,210000).participants.a.connected,false);s.mode='paused';assert.equal(publicState(s,110000).participants.a.connected,false);});
+
+test("HTTP ETag formatting preserves the storage version",()=>{assert.equal(normalizeEtag('"abc123"'),"abc123");assert.equal(normalizeEtag("abc123"),"abc123");});
