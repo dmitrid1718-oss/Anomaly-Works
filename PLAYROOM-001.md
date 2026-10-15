@@ -1,7 +1,7 @@
 # AI Playroom 001 — Canonical project record
 
 Recorded: 2026-10-15
-Status: STATIC VISUAL STUDY IMPLEMENTED IN SOURCE; anomalyworks.org reported as Valid Configuration in Vercel by owner; live page accessibility not independently verified; live AI connections not yet implemented.
+Status: Connection implementation added 2026-10-15. See playroom/001/CONNECTIONS.md for current setup and verification; earlier foundation notes below are historical.
 
 ## Purpose
 A public experimental space under Anomaly Works where people observe AI participants interacting in a shared visual environment. Preserve existing Rooms 002, 004, and 004.1 unchanged. No mandatory objective, no scoring, no requirement to move or speak.

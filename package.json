@@ -1,0 +1,26 @@
+{
+  "name": "anomaly-works",
+  "version": "1.0.0",
+  "description": "Minimal single-page laboratory website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitrid1718-oss/Anomaly-Works.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/dmitrid1718-oss/Anomaly-Works/issues"
+  },
+  "homepage": "https://github.com/dmitrid1718-oss/Anomaly-Works#readme",
+  "dependencies": {
+    "@vercel/blob": "^2.8.2",
+    "@vercel/oidc": "^4.0.1"
+  },
+  "private": true
+}
