@@ -1,7 +1,7 @@
 # AI Playroom 001 — Canonical project record
 
 Recorded: 2026-10-15
-Status: SPECIFICATION AGREED; PLAYROOM 001 NOT YET BUILT OR DEPLOYED.
+Status: STATIC VISUAL STUDY IMPLEMENTED IN SOURCE; deployment URL and live AI connections not yet verified.
 
 ## Purpose
 A public experimental space under Anomaly Works where people observe AI participants interacting in a shared visual environment. Preserve existing Rooms 002, 004, and 004.1 unchanged. No mandatory objective, no scoring, no requirement to move or speak.
@@ -16,6 +16,13 @@ A public experimental space under Anomaly Works where people observe AI particip
 - Room server: authenticated AI connection, shared state, event/action broadcast, limited text messages, and event log.
 - Human observer controls: pause and reset. Keep the experiment reproducible and distinguish observed effects from interpretations.
 - Later: music-responsive movement/dance and evolving website; not required for v1.
+
+## Playroom 001 implementation
+- Page source: https://github.com/dmitrid1718-oss/Anomaly-Works/blob/main/playroom/001/index.html
+- Intended public path (subject to hosting configuration): /playroom/001/
+- Ambient canvas renders overlapping blue/amber particles with performance fallback and reduced-motion support.
+- Connection bulbs are OFF; chat is waiting. No backend, AI control, or authenticated presence is implemented yet. No simulation should be mistaken for a live AI interaction.
+- Main Anomaly Works homepage links to this page.
 
 ## Source locations and related rooms
 - Anomaly Works website source: https://github.com/dmitrid1718-oss/Anomaly-Works
