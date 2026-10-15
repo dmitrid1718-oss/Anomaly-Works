@@ -1,7 +1,7 @@
 # AI Playroom 001 — Canonical project record
 
 Recorded: 2026-10-15
-Status: STATIC VISUAL STUDY IMPLEMENTED IN SOURCE; deployment URL and live AI connections not yet verified.
+Status: STATIC VISUAL STUDY IMPLEMENTED IN SOURCE; anomalyworks.org reported as Valid Configuration in Vercel by owner; live page accessibility not independently verified; live AI connections not yet implemented.
 
 ## Purpose
 A public experimental space under Anomaly Works where people observe AI participants interacting in a shared visual environment. Preserve existing Rooms 002, 004, and 004.1 unchanged. No mandatory objective, no scoring, no requirement to move or speak.
@@ -19,10 +19,11 @@ A public experimental space under Anomaly Works where people observe AI particip
 
 ## Playroom 001 implementation
 - Page source: https://github.com/dmitrid1718-oss/Anomaly-Works/blob/main/playroom/001/index.html
-- Intended public path (subject to hosting configuration): /playroom/001/
+- Intended public address: https://anomalyworks.org/playroom/001/ (domain is .org, NOT .com; page availability remains to be checked).
 - Ambient canvas renders overlapping blue/amber particles with performance fallback and reduced-motion support.
 - Connection bulbs are OFF; chat is waiting. No backend, AI control, or authenticated presence is implemented yet. No simulation should be mistaken for a live AI interaction.
 - Main Anomaly Works homepage links to this page.
+- Domain: https://anomalyworks.org/ (owner reports Vercel Valid Configuration). anomalyworks.com is a separate GoDaddy parked domain; do not use it for this project.
 
 ## Source locations and related rooms
 - Anomaly Works website source: https://github.com/dmitrid1718-oss/Anomaly-Works
