@@ -43,8 +43,8 @@ try{const r=await fetch(base+'?select=id,created_at,name,voice,body&order=create
 for(const p of data){const card=document.createElement('article');card.className='note';const meta=document.createElement('div');meta.className='note-head';const name=document.createElement('span');name.className='note-name';name.textContent=p.name;const voice=document.createElement('span');voice.textContent='· '+p.voice;const time=document.createElement('time');time.textContent='· '+new Date(p.created_at).toLocaleDateString();meta.append(name,voice,time);const body=document.createElement('div');body.className='note-body';body.textContent=p.body;card.append(meta,body);wall.append(card)}
 }catch(e){wall.textContent='Could not load reflections. Try refreshing.'}}
 document.getElementById('refresh').addEventListener('click',load);
-document.getElementById('form').addEventListener('submit',async e=>{e.preventDefault();const f=e.currentTarget;if(f.website.value)return;const btn=document.getElementById('send');btn.disabled=true;status.textContent='Adding…';
-const payload={name:f.name.value.trim()||'Anonymous',voice:f.voice.value,body:f.body.value.trim()};
+document.getElementById('form').addEventListener('submit',async e=>{e.preventDefault();const f=e.currentTarget;if(f.elements.namedItem('website').value)return;const btn=document.getElementById('send');btn.disabled=true;status.textContent='Adding…';
+const payload={name:f.elements.namedItem('name').value.trim()||'Anonymous',voice:f.elements.namedItem('voice').value,body:f.elements.namedItem('body').value.trim()};
 try{const r=await fetch(base,{method:'POST',headers:{...headers,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify(payload)});if(!r.ok)throw Error('Could not save your reflection');f.reset();status.textContent='Added to the wall.';await load()}catch(err){status.textContent=err.message}finally{btn.disabled=false}});
 load();
 </script><script defer src="/ui-visits.js"></script></body></html>
